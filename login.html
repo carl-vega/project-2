@@ -18,58 +18,54 @@
   </head>
 
   <body>
-    <div id="login">
-      <nav>
+    <!-- Nav Bar -->
+    <nav>
         <div class="nav-wrapper">
           <div class="container">
             <a href="#" class="brand-logo">Ruin Your Friendship</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li><a href="https://github.com/manleyac/project-2" target="_blank">Github</a></li>
-              <li><a href="signup.html" id="sign-up">Sign Up</a></li>
+              <li><a href="signup.html" id="log-in">Sign Up</a></li>
             </ul>
           </div>
         </div>
       </nav>
 
+      <!-- Page header -->
       <div class="container">
         <div class="row">
           <div class="col s12"><h3 class="center-align">Welcome to Ruin Your Friendship!</h3></div>
           <div class="col s12"><p class="center-align">Something about our project will go here.</p></div>
         </div>
       </div>
-    </div>
 
-    <div class="container">
+      <!-- Log In Form -->
+      <div class="container">
+        <h4>Log In</h4>
+        <form id="log-form">
         <div class="row">
-            <div class="col s12"><h4>Log In Here</h4></div>
-            <form class="col s6">
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="username" type="text" class="validate">
-                  <label for="username">Username</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="password" type="password" class="validate">
-                  <label for="password">Password</label>
-                </div>
-              </div>
-              <div class="row">
-                <button class="btn waves-effect waves-light red lighten-1" type="submit" name="action">Submit</button>
-              </div>
-            </form>
+          <div class="input-field col s12">
+              <input id="username" name="user" type="text" required/>
+              <label for="username">Username</label>
           </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+                <input id="password" name="pass" type="password" required/>
+                <label for="password">Password</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 right-align">
+              <button class="btn waves-effect waves-light red lighten-1" type="submit" name="action">Submit</button>
+          </div>
+        </div>
+        </form>
       </div>
-    </div>
-
-
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
-    ></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="/js/index.js"></script>
+      
+      <!-- Compiled and minified JavaScript -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="public/js/index.js"></script>
   </body>
 </html>

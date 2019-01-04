@@ -1,28 +1,30 @@
-class Board {
-   constructor(player1, player2) {
-      this.positions;
-      this.player1 = player1;
-      this.player2 = player2;
-      this.turn = player1;
-   }
-   initGame() {
-      let gameArray = [];
-      for(let i = 0; i < 9; i++) {
-         gameArray.push("-");
-      }
-      this.positions = gameArray;
-   }
-   playTurn(letter, position) {
-      this.positions[position] = letter;
-      if(this.turn === player1) {
-         this.turn = player2;
-      } else {
-         this.turn = player1;
-      }
-   }
+var origBoard;
+const player1 = 'O';
+const player2 = 'X';
+const winCombos = [
+	[0, 1, 2],
+	[3, 4, 5],
+	[6, 7, 8],
+	[0, 3, 6],
+	[1, 4, 7],
+	[2, 5, 8],
+	[0, 4, 8],
+	[6, 4, 2]
+]
+
+const cells = document.querySelectorAll('.cell');
+startGame();
+
+function startGame() {
+   
 }
 
-function playGame() {
-   let gameBoard = new Board;
-   gameBoard.initGame();
+function newGame() {
+	document.querySelector(".endgame").style.display = "none";
+	origBoard = Array.from(Array(9).keys());
+	for (var i = 0; i < cells.length; i++) {
+		cells[i].innerText = '';
+		cells[i].style.removeProperty('background-color');
+		cells[i].addEventListener('click', turnClick, false);
+	}
 }

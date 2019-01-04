@@ -1,7 +1,3 @@
-// Get references to page elements
-//var signupBtn = $("#signup");
-//var loginBtn = $("#login");
-
 $("#reg-form").validate({
   rules: {
       user: {
@@ -35,7 +31,4 @@ $("#reg-form").validate({
       }
   }
 });
-
-// Add event listeners to the submit and delete buttons
-//signupBtn.on("click", signUpSubmit);
 

@@ -33,7 +33,7 @@ module.exports = function(app) {
 
   // Load tictactoe page
   app.get("/tictactoe", function(req, res) {
-    res.render("../public/tictactoe");
+    res.render("tictactoe");
   });
 
   // Render 404 page for any unmatched routes

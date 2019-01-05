@@ -6,6 +6,11 @@ module.exports = function(app) {
     res.render("index");
   });
 
+  // handle facebook oauth responsee
+  app.get("/#_=_", function(req, res) {
+    res.render("index");
+  });
+
   // Load sign up page
   app.get("/signup", function(req, res) {
     res.render("signup");

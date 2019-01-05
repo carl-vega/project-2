@@ -1,3 +1,4 @@
+// Sign up page validation
 $("#reg-form").validate({
   rules: {
       user: {
@@ -31,4 +32,23 @@ $("#reg-form").validate({
       }
   }
 });
+
+// API Post for new users
+$("#signupBtn").on("click", function(event) {
+    event.preventDefault();
+  
+    // Make a new user object
+    var newUser = {
+      username: $("#username").val().trim(),
+      password: $("#password").val().trim()
+    };
+  
+    // send an AJAX POST-request with jQuery
+    $.post("/api/new", newUser)
+      .then(function(data) {
+        console.log(data);
+        alert("Adding new user...");
+    });
+});
+  
 

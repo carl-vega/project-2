@@ -49,7 +49,6 @@ function main() {
    //init Array for new game
    let gameBoard = newBoard();
    displayBoard(gameBoard);
-   console.log(gameBoard); 
    $("#reset").click(function() {
       main();
 
@@ -58,8 +57,8 @@ function main() {
       if (gameBoard[$(this).attr("id")] === "" && play) {
         if ((move%2)==1) {
          gameBoard[$(this).attr("id")] = "O";
-         console.log(gameBoard);
          displayBoard(gameBoard);
+         move++
          if (checkForWinner()!=-1 && checkForWinner()!="") { 
             if (checkForWinner()=="X") { $("#alert").text("Player 1 wins!"); }
                  else { $("#alert").text("Player 2 wins!"); }
@@ -68,7 +67,6 @@ function main() {
         }
         else { 
          gameBoard[$(this).attr("id")] = "X";
-         console.log(gameBoard);
          displayBoard(gameBoard);
         move++;
         if (checkForWinner()!=-1 && checkForWinner()!="") { 
@@ -82,6 +80,7 @@ function main() {
 
    $("#reset").click(function() {
       if(!play) {
+         main();
          $("#board tr td").text("");
       }
       

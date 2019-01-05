@@ -14,26 +14,30 @@
 </div>
 </nav>
 
-<table class="endgame">
-	<tr scope="row">
-		<td class="cell" id="0"></td>
-		<td class="cell" id="1"></td>
-		<td class="cell" id="2"></td>
-	</tr>
-	<tr scope="row">
-		<td class="cell" id="3"></td>
-		<td class="cell" id="4"></td>
-		<td class="cell" id="5"></td>
-	</tr>
-	<tr scope="row">
-		<td class="cell" id="6"></td>
-		<td class="cell" id="7"></td>
-		<td class="cell" id="8"></td>
-	</tr>
-</table>
-<div class="endgame">
-	<div class="text"></div>
-</div>
-<button onClick="startGame()">Replay</button>
-
-<script src="../public/js/tictactoe.js"></script>
+<table id="board">
+		<tr scope="row">
+			<td class="cell" id="0"></td>
+			<td class="cell" id="1"></td>
+			<td class="cell" id="2"></td>
+		</tr>
+		<tr scope="row">
+			<td class="cell" id="3"></td>
+			<td class="cell" id="4"></td>
+			<td class="cell" id="5"></td>
+		</tr>
+		<tr scope="row">
+			<td class="cell" id="6"></td>
+			<td class="cell" id="7"></td>
+			<td class="cell" id="8"></td>
+		</tr>
+	</table>
+	<div>
+		<div class="text"></div>
+	</div>
+	<button id="reset">Replay</button>
+	<script
+  		src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  		crossorigin="anonymous">
+	</script>
+  <script src="../public/js/tictactoe.js"></script>

@@ -11,13 +11,13 @@ var db = {};
 // if (config.use_env_variable) {
 //   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 // } else {
-  var sequelize = new Sequelize(
-    config.development.database,
-    config.development.username,
-    config.development.password,
-    config
-  );
-// }
+//   var sequelize = new Sequelize(
+//     config.development.database,
+//     config.development.username,
+//     config.development.password,
+//     config
+//   );
+// // }
 
 fs.readdirSync(__dirname)
   .filter(function(file) {

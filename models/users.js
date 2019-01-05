@@ -1,8 +1,8 @@
 module.exports = function(sequelize, DataTypes) {
-  var Users = sequelize.define("Users", {
-    username: DataTypes.STRING,
-    password: DataTypes.STRING,
-    online: DataTypes.BOOLEAN
+  var User = sequelize.define("User", {
+    username: {type: DataTypes.STRING, allowNull: false},
+    password: {type: DataTypes.STRING, allowNull: false},
+    online: {type: DataTypes.BOOLEAN, allowNull: false, defaultValue: true}
   });
-  return Users;
+  return User;
 };

@@ -16,7 +16,7 @@ var db = {};
     config.username,
     config.password,
     config
-//   );
+  );
 // }
 
 fs.readdirSync(__dirname)
